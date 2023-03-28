@@ -1,0 +1,35 @@
+openapi: 3.0.0
+servers:
+    url: https://localhost/api
+paths:
+  /user/{userId}:
+    get:
+      summary: Get a user by ID
+      parameters:
+        - in: path
+          name: userId
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          $ref: '#/components/schemas/UserFullName'
+        age:
+          type: integer
+    UserFullName:
+      type: object
+      properties:
+        firstName:
+          type: string
+        lastName:
+          type: string

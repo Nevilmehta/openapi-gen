@@ -1,0 +1,14 @@
+npx @openapitools/openapi-generator-cli generate -i petstore.yaml -g ruby -o /tmp/test/
+
+
+
+
+
+
+
+npx @openapitools/openapi-generator-cli generate -i B:\Infinityai\openapi-gen\petstore.yaml -g python -o B:\Infinityai\openapi-gen\pythonsdk
+
+
+
+
+- here is an example path through which one can generate various language code in openapi-generator by yaml data
